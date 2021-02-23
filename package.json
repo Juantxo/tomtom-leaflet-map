@@ -1,7 +1,11 @@
 {
     "name": "leaflet-tomtom",
     "version": "1.0.0",
-    "description": "",
+    "description": "Demo de uso de la API de flujo de tráfico de Tomtom sobre un mapa de Leaflet",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Juantxo/tomtom-leaflet-map.git"
+    },
     "main": "index.js",
     "scripts": {
         "start": "gulp",
