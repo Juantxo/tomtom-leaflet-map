@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es-ES" class="responsive">
+
+<head>
+    <title>Leaflet plus Tomtom</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Juantxo Cruz">
+    <meta name="description" content="Leaflet y Tomtom">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/avia.css">
+
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <script src="./node_modules/leaflet/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <form action="" method="" target="_blank" class="tomtom-form" id="tomtom_form" name="diabetes_form">
+                        <div class="tomtom-select">
+                            <label for="cars">Choose a map:</label>
+                            <select name="ttMapType" id="ttMapType">
+                                <option value='relative0' selected>relative0</option>
+                                <option value='relative0-dark'>relative0-dark</option>
+                                <option value='absolute'>absolute</option>
+                                <option value='relative'>relative</option>
+                                <option value='relative-delay'>relative-delay</option>
+                                <option value='reduced-sensitivity'>reduced-sensitivity</option>
+                            </select>
+
+                        </div>
+                    </form>
+
+                    <div id="leaflet_map" class="leaflet-map">
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <script type="application/javascript">
+
+        let loadScripts = (sources) => {
+            sources.forEach(src => {
+                let script = document.createElement('script');
+                script.src = src;
+                script.async = false; //<-- the important part
+                document.body.appendChild(script); //<-- make sure to append to body instead of head 
+            });
+        }
+
+        loadScripts([
+            "./assets/js/tomtom.v1.js?v=2021"
+        ])
+
+
+    </script>
+
+</body>
+
+</html>
